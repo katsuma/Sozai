@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate {
                             
     @IBOutlet var tableView : UITableView
-    let baseUrl = "http://img.tiqav.com/"
-    var tiqavs: String[] = []
+    let baseUrl = "http://sozai.katsuma.tv/images/"
+    var images: String[] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func reload() {
-        // Thanks to tiqav api! ( http://dev.tiqav.com/ )
-        let URL = NSURL(string: "http://api.tiqav.com/search/random.json")
+        let URL = NSURL(string: "http://sozai.katsuma.tv/api/sozais.json")
         let Req = NSURLRequest(URL: URL)
         let connection: NSURLConnection = NSURLConnection(request: Req, delegate: self, startImmediately: false)
 
@@ -34,14 +33,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func fetchResponse(res: NSURLResponse!, data: NSData!, error: NSError!) {
         let json: NSArray = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as NSArray
 
-        tiqavs = []
-
-        for img: NSDictionary! in json {
-            var imgId = img.objectForKey("id") as String
-            var ext = img.objectForKey("ext") as String
-
-            var imageUrl = baseUrl + imgId + "." + ext
-            tiqavs += imageUrl
+        for image: NSDictionary! in json {
+            var imageUrl = image.objectForKey("image") as String
+            images += imageUrl
         }
 
         dispatch_async(dispatch_get_main_queue(), {
@@ -50,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
-        return tiqavs.count
+        return images.count
     }
 
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
@@ -60,7 +54,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
         let cell: TiqavCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as TiqavCell
 
-        var imageUrl = tiqavs[indexPath.row] as String
+        var imageUrl = images[indexPath.row] as String
 
         cell.tiqavUrlLabel.text = imageUrl;
         cell.tiqavImageView.image = nil;
@@ -83,7 +77,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
-        var text: String = tiqavs[indexPath.row]
+        var text: String = images[indexPath.row]
 
         // show alert
         let alertView: UIAlertView = UIAlertView()
