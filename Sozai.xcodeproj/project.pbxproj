@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16BFDB5E1967FB7A000EF417 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB5D1967FB7A000EF417 /* AppDelegate.swift */; };
+		16BFDB601967FB7A000EF417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB5F1967FB7A000EF417 /* ViewController.swift */; };
+		16BFDB631967FB7A000EF417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BFDB611967FB7A000EF417 /* Main.storyboard */; };
+		16BFDB651967FB7A000EF417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16BFDB641967FB7A000EF417 /* Images.xcassets */; };
+		16BFDB711967FB7A000EF417 /* SozaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB701967FB7A000EF417 /* SozaiTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16BFDB6B1967FB7A000EF417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16BFDB501967FB7A000EF417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16BFDB571967FB7A000EF417;
+			remoteInfo = Sozai;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16BFDB581967FB7A000EF417 /* Sozai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sozai.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16BFDB5C1967FB7A000EF417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16BFDB5D1967FB7A000EF417 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16BFDB5F1967FB7A000EF417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16BFDB621967FB7A000EF417 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16BFDB641967FB7A000EF417 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16BFDB6A1967FB7A000EF417 /* SozaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SozaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16BFDB6F1967FB7A000EF417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16BFDB701967FB7A000EF417 /* SozaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SozaiTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16BFDB551967FB7A000EF417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16BFDB671967FB7A000EF417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16BFDB4F1967FB7A000EF417 = {
+			isa = PBXGroup;
+			children = (
+				16BFDB5A1967FB7A000EF417 /* Sozai */,
+				16BFDB6D1967FB7A000EF417 /* SozaiTests */,
+				16BFDB591967FB7A000EF417 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16BFDB591967FB7A000EF417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16BFDB581967FB7A000EF417 /* Sozai.app */,
+				16BFDB6A1967FB7A000EF417 /* SozaiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16BFDB5A1967FB7A000EF417 /* Sozai */ = {
+			isa = PBXGroup;
+			children = (
+				16BFDB5D1967FB7A000EF417 /* AppDelegate.swift */,
+				16BFDB5F1967FB7A000EF417 /* ViewController.swift */,
+				16BFDB611967FB7A000EF417 /* Main.storyboard */,
+				16BFDB641967FB7A000EF417 /* Images.xcassets */,
+				16BFDB5B1967FB7A000EF417 /* Supporting Files */,
+			);
+			path = Sozai;
+			sourceTree = "<group>";
+		};
+		16BFDB5B1967FB7A000EF417 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16BFDB5C1967FB7A000EF417 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16BFDB6D1967FB7A000EF417 /* SozaiTests */ = {
+			isa = PBXGroup;
+			children = (
+				16BFDB701967FB7A000EF417 /* SozaiTests.swift */,
+				16BFDB6E1967FB7A000EF417 /* Supporting Files */,
+			);
+			path = SozaiTests;
+			sourceTree = "<group>";
+		};
+		16BFDB6E1967FB7A000EF417 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16BFDB6F1967FB7A000EF417 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16BFDB571967FB7A000EF417 /* Sozai */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16BFDB741967FB7A000EF417 /* Build configuration list for PBXNativeTarget "Sozai" */;
+			buildPhases = (
+				16BFDB541967FB7A000EF417 /* Sources */,
+				16BFDB551967FB7A000EF417 /* Frameworks */,
+				16BFDB561967FB7A000EF417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sozai;
+			productName = Sozai;
+			productReference = 16BFDB581967FB7A000EF417 /* Sozai.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16BFDB691967FB7A000EF417 /* SozaiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16BFDB771967FB7A000EF417 /* Build configuration list for PBXNativeTarget "SozaiTests" */;
+			buildPhases = (
+				16BFDB661967FB7A000EF417 /* Sources */,
+				16BFDB671967FB7A000EF417 /* Frameworks */,
+				16BFDB681967FB7A000EF417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16BFDB6C1967FB7A000EF417 /* PBXTargetDependency */,
+			);
+			name = SozaiTests;
+			productName = SozaiTests;
+			productReference = 16BFDB6A1967FB7A000EF417 /* SozaiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16BFDB501967FB7A000EF417 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = katsuma;
+				TargetAttributes = {
+					16BFDB571967FB7A000EF417 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					16BFDB691967FB7A000EF417 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 16BFDB571967FB7A000EF417;
+					};
+				};
+			};
+			buildConfigurationList = 16BFDB531967FB7A000EF417 /* Build configuration list for PBXProject "Sozai" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16BFDB4F1967FB7A000EF417;
+			productRefGroup = 16BFDB591967FB7A000EF417 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16BFDB571967FB7A000EF417 /* Sozai */,
+				16BFDB691967FB7A000EF417 /* SozaiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16BFDB561967FB7A000EF417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BFDB631967FB7A000EF417 /* Main.storyboard in Resources */,
+				16BFDB651967FB7A000EF417 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16BFDB681967FB7A000EF417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16BFDB541967FB7A000EF417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BFDB601967FB7A000EF417 /* ViewController.swift in Sources */,
+				16BFDB5E1967FB7A000EF417 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16BFDB661967FB7A000EF417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BFDB711967FB7A000EF417 /* SozaiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16BFDB6C1967FB7A000EF417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16BFDB571967FB7A000EF417 /* Sozai */;
+			targetProxy = 16BFDB6B1967FB7A000EF417 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16BFDB611967FB7A000EF417 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16BFDB621967FB7A000EF417 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16BFDB721967FB7A000EF417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16BFDB731967FB7A000EF417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16BFDB751967FB7A000EF417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Sozai/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16BFDB761967FB7A000EF417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Sozai/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16BFDB781967FB7A000EF417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sozai.app/Sozai";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SozaiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		16BFDB791967FB7A000EF417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sozai.app/Sozai";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SozaiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16BFDB531967FB7A000EF417 /* Build configuration list for PBXProject "Sozai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16BFDB721967FB7A000EF417 /* Debug */,
+				16BFDB731967FB7A000EF417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16BFDB741967FB7A000EF417 /* Build configuration list for PBXNativeTarget "Sozai" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16BFDB751967FB7A000EF417 /* Debug */,
+				16BFDB761967FB7A000EF417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		16BFDB771967FB7A000EF417 /* Build configuration list for PBXNativeTarget "SozaiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16BFDB781967FB7A000EF417 /* Debug */,
+				16BFDB791967FB7A000EF417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16BFDB501967FB7A000EF417 /* Project object */;
+}
