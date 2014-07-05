@@ -13,6 +13,7 @@
 		16BFDB651967FB7A000EF417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16BFDB641967FB7A000EF417 /* Images.xcassets */; };
 		16BFDB711967FB7A000EF417 /* SozaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB701967FB7A000EF417 /* SozaiTests.swift */; };
 		16BFDB7F19685187000EF417 /* SozaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB7E19685187000EF417 /* SozaiCell.swift */; };
+		16BFDB81196858CA000EF417 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB80196858CA000EF417 /* DetailImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		16BFDB6F1967FB7A000EF417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16BFDB701967FB7A000EF417 /* SozaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SozaiTests.swift; sourceTree = "<group>"; };
 		16BFDB7E19685187000EF417 /* SozaiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SozaiCell.swift; sourceTree = "<group>"; };
+		16BFDB80196858CA000EF417 /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				16BFDB641967FB7A000EF417 /* Images.xcassets */,
 				16BFDB5B1967FB7A000EF417 /* Supporting Files */,
 				16BFDB7E19685187000EF417 /* SozaiCell.swift */,
+				16BFDB80196858CA000EF417 /* DetailImageViewController.swift */,
 			);
 			path = Sozai;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				16BFDB7F19685187000EF417 /* SozaiCell.swift in Sources */,
 				16BFDB601967FB7A000EF417 /* ViewController.swift in Sources */,
+				16BFDB81196858CA000EF417 /* DetailImageViewController.swift in Sources */,
 				16BFDB5E1967FB7A000EF417 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

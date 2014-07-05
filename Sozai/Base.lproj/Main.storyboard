@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Avz-3n-kA9">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
@@ -32,11 +31,11 @@
                         <viewControllerLayoutGuide type="bottom" id="ryu-2b-HmH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fCJ-r0-JTM">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HqC-h9-xRg">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="rQW-tP-KXr" customClass="SozaiCell" customModule="Sozai" customModuleProvider="target">
@@ -48,8 +47,9 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-Jb-OT4">
                                                     <rect key="frame" x="0.0" y="0.0" width="568" height="121"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O77-pD-egC">
-                                                    <rect key="frame" x="420" y="93" width="128" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O77-pD-egC">
+                                                    <rect key="frame" x="-10" y="100" width="128" height="21"/>
+                                                    <rect key="contentStretch" x="0.10000000000000002" y="0.10000000000000002" width="1" height="1"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -58,7 +58,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="sozaiImageView" destination="Psf-Jb-OT4" id="vOp-3d-WUX"/>
-                                            <outlet property="sozaiUrlLabel" destination="O77-pD-egC" id="v32-ot-fKp"/>
+                                            <outlet property="sozaiLabel" destination="O77-pD-egC" id="bSi-Ng-Xuy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,7 +84,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="568" height="320"/>
+                    <size key="freeformSize" width="480" height="480"/>
                     <connections>
                         <outlet property="tableView" destination="HqC-h9-xRg" id="voE-1D-RHo"/>
                     </connections>
@@ -92,6 +92,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIP-jA-9dh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1246" y="100"/>
+        </scene>
+        <!--Detail Image View Controller - Title-->
+        <scene sceneID="VVw-Ml-e45">
+            <objects>
+                <viewController id="NY3-wR-Aka" customClass="DetailImageViewController" customModule="Sozai" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3XB-aE-G8a"/>
+                        <viewControllerLayoutGuide type="bottom" id="1HF-a2-bcr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Cuc-3x-MAi">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDv-RI-jOE">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="esC-rV-vIb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ao-jM-iTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="118"/>
         </scene>
     </scenes>
 </document>

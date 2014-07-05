@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var tableView : UITableView
     let baseUrl = "http://sozai.katsuma.tv/images/"
     var images: String[] = []
+    var labels: String[] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         for image: NSDictionary! in json {
             var imageUrl = image.objectForKey("image") as String
+            var imageLabel = image.objectForKey("title") as String
             images += imageUrl
+            labels += imageLabel
         }
 
-        dispatch_async(dispatch_get_main_queue(), {
-            self.tableView.reloadData()
-            })
+        dispatch_async(dispatch_get_main_queue(), { self.tableView.reloadData()})
     }
 
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int  {
@@ -55,9 +56,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: SozaiCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as SozaiCell
 
         var imageUrl = images[indexPath.row] as String
+        var imageLabel = labels[indexPath.row] as String
 
-        cell.sozaiUrlLabel.text = imageUrl;
-        cell.sozaiImageView.image = nil;
+        println(cell.sozaiLabel.frame.origin.x)
+        println(cell.sozaiLabel.frame.origin.y)
+
+        cell.sozaiLabel.text = "    \(imageLabel)"
+        cell.sozaiImageView.image = nil
 
         var q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         var q_main: dispatch_queue_t  = dispatch_get_main_queue();
@@ -69,7 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             var image: UIImage = UIImage(data: imageData)
 
             dispatch_async(q_main, {
-                cell.sozaiImageView.image = image;
+                cell.sozaiImageView.image = image
                 cell.layoutSubviews()
                 })
             })
@@ -77,19 +82,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
-        var text: String = images[indexPath.row]
+        var text: String = labels[indexPath.row]
 
         // show alert
         let alertView: UIAlertView = UIAlertView()
-        alertView.title = "taped"
-        alertView.message = text
+        alertView.title = text
+        alertView.message = "is tapped"
         alertView.addButtonWithTitle("close")
         alertView.show()
+
+        //detailViewController : DetailViewController =
     }
 
     @IBAction func reloadBtnTouched(sender : AnyObject) {
         self.reload()
-        self.tableView.scrollRectToVisible(CGRect(x:0 , y: 0, width: 1,height:1), animated: true)
+        self.tableView.scrollRectToVisible(CGRect(x:0 , y: 0, width: 1, height: 1), animated: true)
     }
 }
 

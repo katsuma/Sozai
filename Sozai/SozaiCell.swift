@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import QuartzCore
 
 class SozaiCell: UITableViewCell {
     @IBOutlet var sozaiImageView : UIImageView
-    @IBOutlet var sozaiUrlLabel : UILabel
+    @IBOutlet var sozaiLabel : UILabel
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        sozaiUrlLabel.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 0.8)
+        sozaiLabel.backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 0.8)
+        sozaiLabel.layer.cornerRadius = 10
+        sozaiLabel.clipsToBounds = true
     }
 }
