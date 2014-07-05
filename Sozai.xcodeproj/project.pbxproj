@@ -12,7 +12,7 @@
 		16BFDB631967FB7A000EF417 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16BFDB611967FB7A000EF417 /* Main.storyboard */; };
 		16BFDB651967FB7A000EF417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16BFDB641967FB7A000EF417 /* Images.xcassets */; };
 		16BFDB711967FB7A000EF417 /* SozaiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB701967FB7A000EF417 /* SozaiTests.swift */; };
-		16BFDB7B1967FF7A000EF417 /* TiqavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB7A1967FF7A000EF417 /* TiqavCell.swift */; };
+		16BFDB7F19685187000EF417 /* SozaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BFDB7E19685187000EF417 /* SozaiCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		16BFDB6A1967FB7A000EF417 /* SozaiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SozaiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16BFDB6F1967FB7A000EF417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16BFDB701967FB7A000EF417 /* SozaiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SozaiTests.swift; sourceTree = "<group>"; };
-		16BFDB7A1967FF7A000EF417 /* TiqavCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiqavCell.swift; sourceTree = "<group>"; };
+		16BFDB7E19685187000EF417 /* SozaiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SozaiCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +82,7 @@
 				16BFDB611967FB7A000EF417 /* Main.storyboard */,
 				16BFDB641967FB7A000EF417 /* Images.xcassets */,
 				16BFDB5B1967FB7A000EF417 /* Supporting Files */,
-				16BFDB7A1967FF7A000EF417 /* TiqavCell.swift */,
+				16BFDB7E19685187000EF417 /* SozaiCell.swift */,
 			);
 			path = Sozai;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16BFDB7B1967FF7A000EF417 /* TiqavCell.swift in Sources */,
+				16BFDB7F19685187000EF417 /* SozaiCell.swift in Sources */,
 				16BFDB601967FB7A000EF417 /* ViewController.swift in Sources */,
 				16BFDB5E1967FB7A000EF417 /* AppDelegate.swift in Sources */,
 			);
@@ -403,6 +403,7 @@
 				16BFDB761967FB7A000EF417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16BFDB771967FB7A000EF417 /* Build configuration list for PBXNativeTarget "SozaiTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +412,7 @@
 				16BFDB791967FB7A000EF417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -52,12 +52,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(tableView: UITableView?, cellForRowAtIndexPath indexPath:NSIndexPath!) -> UITableViewCell! {
-        let cell: TiqavCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as TiqavCell
+        let cell: SozaiCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as SozaiCell
 
         var imageUrl = images[indexPath.row] as String
 
-        cell.tiqavUrlLabel.text = imageUrl;
-        cell.tiqavImageView.image = nil;
+        cell.sozaiUrlLabel.text = imageUrl;
+        cell.sozaiImageView.image = nil;
 
         var q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         var q_main: dispatch_queue_t  = dispatch_get_main_queue();
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             var image: UIImage = UIImage(data: imageData)
 
             dispatch_async(q_main, {
-                cell.tiqavImageView.image = image;
+                cell.sozaiImageView.image = image;
                 cell.layoutSubviews()
                 })
             })
