@@ -72,6 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
             dispatch_async(q_main, {
                 cell.sozaiImageView.image = image
+                cell.sozaiIndicator.stopAnimating()
                 cell.layoutSubviews()
                 })
             })

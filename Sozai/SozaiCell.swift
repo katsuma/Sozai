@@ -12,6 +12,14 @@ import QuartzCore
 class SozaiCell: UITableViewCell {
     @IBOutlet var sozaiImageView : UIImageView
     @IBOutlet var sozaiLabel : UILabel
+    @IBOutlet var sozaiIndicator : UIActivityIndicatorView
+
+    override func drawRect(rect:CGRect) {
+        super.drawRect(rect)
+
+        self.sozaiIndicator.startAnimating()
+        self.sozaiIndicator.hidesWhenStopped = true
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
