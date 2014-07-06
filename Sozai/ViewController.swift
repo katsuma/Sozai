@@ -81,14 +81,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath:NSIndexPath!) {
         var text: String = labels[indexPath.row]
-
-        // show alert
-        //let alertView: UIAlertView = UIAlertView()
-        //alertView.title = text
-        //alertView.message = "is tapped"
-        //alertView.addButtonWithTitle("close")
-        //alertView.show()
-
         var controller : DetailImageViewController = self.storyboard.instantiateViewControllerWithIdentifier("DetailImageViewController") as DetailImageViewController
         var imageUrl = images[indexPath.row]
         controller.url = imageUrl
