@@ -31,6 +31,10 @@ class DetailImageViewController : UIViewController, NSURLConnectionDelegate {
 
             dispatch_async(q_main, {
                 self.imageView.image = image
+
+                var xScale: CGFloat = 0.5;
+                var yScale: CGFloat = 0.5;
+                self.imageView.transform = CGAffineTransformMakeScale(xScale, yScale);
                 self.indicator.stopAnimating()
                 }
             )
