@@ -113,9 +113,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EDv-RI-jOE">
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fd-aP-C2n">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
-                            </imageView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NY3-wR-Aka" id="dvc-DG-h47"/>
+                                </connections>
+                            </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sz3-y7-SNd">
                                 <rect key="frame" x="230" y="225" width="20" height="20"/>
                             </activityIndicatorView>
@@ -126,9 +130,9 @@
                             <constraint firstAttribute="centerY" secondItem="sz3-y7-SNd" secondAttribute="centerY" id="1ZF-Sq-tnK"/>
                             <constraint firstItem="sz3-y7-SNd" firstAttribute="top" secondItem="3XB-aE-G8a" secondAttribute="bottom" constant="20" symbolic="YES" id="2kc-4F-beh"/>
                             <constraint firstItem="sz3-y7-SNd" firstAttribute="leading" secondItem="Cuc-3x-MAi" secondAttribute="leading" constant="20" symbolic="YES" id="EfG-Wf-Lkz"/>
-                            <constraint firstAttribute="centerY" secondItem="EDv-RI-jOE" secondAttribute="centerY" id="IN5-6W-lMs"/>
                             <constraint firstAttribute="centerX" secondItem="sz3-y7-SNd" secondAttribute="centerX" id="M7h-Hs-H3A"/>
-                            <constraint firstAttribute="centerX" secondItem="EDv-RI-jOE" secondAttribute="centerX" id="ibx-0e-CNj"/>
+                            <constraint firstAttribute="centerX" secondItem="9Fd-aP-C2n" secondAttribute="centerX" id="hwP-rs-RXk"/>
+                            <constraint firstAttribute="centerY" secondItem="9Fd-aP-C2n" secondAttribute="centerY" id="onW-IJ-ZgH"/>
                             <constraint firstAttribute="trailing" secondItem="sz3-y7-SNd" secondAttribute="trailing" constant="20" symbolic="YES" id="yGj-am-B2b"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -137,7 +141,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="480" height="480"/>
                     <connections>
-                        <outlet property="imageView" destination="EDv-RI-jOE" id="QJS-Ca-cQq"/>
+                        <outlet property="imageView" destination="9Fd-aP-C2n" id="gOX-s7-isa"/>
                         <outlet property="indicator" destination="sz3-y7-SNd" id="IXI-tG-nT2"/>
                     </connections>
                 </viewController>

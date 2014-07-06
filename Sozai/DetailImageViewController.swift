@@ -8,36 +8,26 @@
 
 import UIKit
 
-class DetailImageViewController : UIViewController, NSURLConnectionDelegate {
-    @IBOutlet var imageView : UIImageView
+class DetailImageViewController : UIViewController, NSURLConnectionDelegate, UIWebViewDelegate {
+    @IBOutlet var imageView : UIWebView
     @IBOutlet var indicator : UIActivityIndicatorView
 
     var url: String = ""
 
     override func viewDidLoad () {
         super.viewDidLoad()
+
         if (nil != self.indicator) {
             self.indicator.startAnimating()
             self.indicator.hidesWhenStopped = true
         }
 
-        var q_global: dispatch_queue_t = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-        var q_main: dispatch_queue_t  = dispatch_get_main_queue();
+        var imageURL: NSURL = NSURL.URLWithString(self.url)
+        var request: NSURLRequest = NSURLRequest(URL: imageURL)
+        self.imageView.loadRequest(request)
+    }
 
-        dispatch_async(q_global, {
-            var imageURL: NSURL = NSURL.URLWithString(self.url)
-            var imageData: NSData = NSData(contentsOfURL: imageURL)
-            var image: UIImage = UIImage(data: imageData)
-
-            dispatch_async(q_main, {
-                self.imageView.image = image
-
-                var xScale: CGFloat = 0.5;
-                var yScale: CGFloat = 0.5;
-                self.imageView.transform = CGAffineTransformMakeScale(xScale, yScale);
-                self.indicator.stopAnimating()
-                }
-            )
-        })
+    func webViewDidFinishLoad(sender: UIWebViewDelegate) {
+        self.indicator.stopAnimating()
     }
 }
