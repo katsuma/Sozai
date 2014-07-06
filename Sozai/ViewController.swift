@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate {
                             
     @IBOutlet var tableView : UITableView
-    let baseUrl = "http://sozai.katsuma.tv/images/"
+    let apiUrl = "http://sozai.katsuma.tv/api/sozais.json"
     var images: String[] = []
     var labels: String[] = []
 
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func reload() {
-        let URL = NSURL(string: "http://sozai.katsuma.tv/api/sozais.json")
+        let URL = NSURL(string: apiUrl)
         let Req = NSURLRequest(URL: URL)
         let connection: NSURLConnection = NSURLConnection(request: Req, delegate: self, startImmediately: false)
 
@@ -58,9 +58,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var imageUrl = images[indexPath.row] as String
         var imageLabel = labels[indexPath.row] as String
 
-        println(cell.sozaiLabel.frame.origin.x)
-        println(cell.sozaiLabel.frame.origin.y)
-
         cell.sozaiLabel.text = "    \(imageLabel)"
         cell.sozaiImageView.image = nil
 
@@ -85,13 +82,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var text: String = labels[indexPath.row]
 
         // show alert
-        let alertView: UIAlertView = UIAlertView()
-        alertView.title = text
-        alertView.message = "is tapped"
-        alertView.addButtonWithTitle("close")
-        alertView.show()
+        //let alertView: UIAlertView = UIAlertView()
+        //alertView.title = text
+        //alertView.message = "is tapped"
+        //alertView.addButtonWithTitle("close")
+        //alertView.show()
 
-        //detailViewController : DetailViewController =
+        var controller : DetailImageViewController = self.storyboard.instantiateViewControllerWithIdentifier("DetailImageViewController") as DetailImageViewController
+        var imageUrl = images[indexPath.row]
+        controller.url = imageUrl
+
+        self.navigationController.pushViewController(controller, animated: true)
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
 
     @IBAction func reloadBtnTouched(sender : AnyObject) {
