@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   ListView,
@@ -13,6 +13,8 @@ import SozaiStyle, { styles } from '../Style/SozaiStyle'
 export default class SozaiList extends Component {
   constructor(props) {
     super(props);
+
+    this._onForward = this._onForward.bind(this);
 
     this.state = {
       isLoaded: false,
@@ -45,6 +47,12 @@ export default class SozaiList extends Component {
     } else {
       return this._renderList();
     }
+  }
+
+  _onForward() {
+    this.props.navigator.push({
+      title: 'Scene ' + nextIndex,
+    });
   }
 
   _renderList() {
