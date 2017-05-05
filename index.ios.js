@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, View, NavigatorIOS, TouchableHighlight } from 'react-native';
+
 import SozaiList from './src/Component/SozaiList';
 import SozaiStyle, { styles } from './src/Style/SozaiStyle'
 

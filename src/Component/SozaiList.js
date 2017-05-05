@@ -8,7 +8,9 @@ import {
   Image,
   ActivityIndicator,
 } from 'react-native';
-import SozaiStyle, { styles } from '../Style/SozaiStyle'
+
+import SozaiStyle, { styles } from '../Style/SozaiStyle';
+import SozaiDetail from './SozaiDetail';
 
 export default class SozaiList extends Component {
   constructor(props) {
@@ -49,9 +51,11 @@ export default class SozaiList extends Component {
     }
   }
 
-  _onForward() {
+  _onForward(entry) {
     this.props.navigator.push({
-      title: 'Scene ' + nextIndex,
+      title: entry.title,
+      component: SozaiDetail,
+      passProps: { url: entry.image }
     });
   }
 
@@ -60,7 +64,7 @@ export default class SozaiList extends Component {
       <View style={styles.sozai}>
         <ListView
           dataSource={this.state.dataSource}
-          renderRow={this.renderEntry}
+          renderRow={this.renderEntry.bind(this)}
         />
       </View>
     );
@@ -77,14 +81,13 @@ export default class SozaiList extends Component {
         <View>
           <Text style={styles.loadingMessage}>Loading...</Text>
         </View>
-
       </View>
     );
   }
 
   renderEntry(entry) {
     return (
-      <TouchableHighlight>
+      <TouchableHighlight onPress={() => this._onForward(entry)}>
         <View>
           <View style={styles.container}>
             <Image source={{uri: entry.image}} style={styles.thumbnail}/>
@@ -98,5 +101,3 @@ export default class SozaiList extends Component {
     );
   }
 }
-
-//module.exports = SozaiList;

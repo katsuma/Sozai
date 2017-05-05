@@ -22,6 +22,11 @@ export const styles = StyleSheet.create({
     marginRight: 10
   },
 
+  fullscreen: {
+    flex: 1,
+    resizeMode: 'cover',
+  },
+
   rightContainer: {
     flex: 1
   },
