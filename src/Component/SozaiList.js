@@ -49,7 +49,7 @@ export default class SozaiList extends Component {
 
   _renderList() {
     return (
-      <View>
+      <View style={styles.sozai}>
         <ListView
           dataSource={this.state.dataSource}
           renderRow={this.renderEntry}

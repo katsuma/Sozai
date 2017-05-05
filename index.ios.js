@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import { AppRegistry, View } from 'react-native';
+import { AppRegistry, View, NavigatorIOS, TouchableHighlight } from 'react-native';
 import SozaiList from './src/Component/SozaiList';
 import SozaiStyle, { styles } from './src/Style/SozaiStyle'
 
 class Sozai extends Component {
   render() {
     return (
-      <View style={styles.sozai}>
-        <SozaiList />
-      </View>
+      <NavigatorIOS
+        initialRoute={{
+          component: SozaiList,
+          title: 'Sozai',
+        }}
+        style={{flex: 1}}
+      />
     );
   }
 }

@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   sozai: {
     flex: 1,
-    paddingTop: 22,
+    paddingTop: 65,
   },
 
   container: {
