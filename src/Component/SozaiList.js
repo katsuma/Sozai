@@ -16,8 +16,6 @@ export default class SozaiList extends Component {
   constructor(props) {
     super(props);
 
-    this._onForward = this._onForward.bind(this);
-
     this.state = {
       isLoaded: false,
       dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
