@@ -88,7 +88,7 @@ export default class SozaiList extends Component {
       <TouchableHighlight onPress={() => this._onForward(entry)}>
         <View>
           <View style={styles.container}>
-            <Image source={{uri: entry.image}} style={styles.thumbnail}/>
+            <Image source={{uri: entry.thumbnail}} style={styles.thumbnail}/>
             <View style={styles.rightContainer}>
               <Text style={styles.title}>{entry.title}</Text>
             </View>
