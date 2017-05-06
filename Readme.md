@@ -1,8 +1,8 @@
 # Sozai
 
-`Sozai` is iOS viewer app for [sozai.katsuma.tv](https://github.com/katsuma/sozai.katsuma.tv)
+`Sozai` is an iOS app for [sozai.katsuma.tv](https://github.com/katsuma/sozai.katsuma.tv) build by ReactNative.
 
-![](http://sozai.katsuma.tv/images/demo.gif)
+![](https://katsuma.tv/images/demo.gif)
 
 ## Contributing
 
