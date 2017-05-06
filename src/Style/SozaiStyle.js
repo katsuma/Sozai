@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFFFFF',
   },
 
   thumbnail: {
@@ -54,7 +54,7 @@ export const styles = StyleSheet.create({
   },
 
   listView: {
-    backgroundColor: '#F5FCFF'
+    backgroundColor: '#FFFFFF'
   },
 
   activityIndicator: {
