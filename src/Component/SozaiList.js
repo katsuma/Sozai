@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   Image,
   ActivityIndicator,
+  Share,
 } from 'react-native';
 
 import SozaiStyle, { styles } from '../Style/SozaiStyle';
@@ -53,8 +54,14 @@ export default class SozaiList extends Component {
     this.props.navigator.push({
       title: entry.title,
       component: SozaiDetail,
-      passProps: { url: entry.image }
+      passProps: { url: entry.image },
+      rightButtonTitle: 'Share',
+      onRightButtonPress: () => this._onShareButton(entry.image),
     });
+  }
+
+  _onShareButton(url) {
+    Share.share({url});
   }
 
   _renderList() {
