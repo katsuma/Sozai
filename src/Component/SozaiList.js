@@ -7,6 +7,7 @@ import {
   TouchableHighlight,
   Image,
   ActivityIndicator,
+  Share,
 } from 'react-native';
 
 import SozaiStyle, { styles } from '../Style/SozaiStyle';
@@ -60,7 +61,7 @@ export default class SozaiList extends Component {
   }
 
   _onShareButton(url) {
-    alert(url);
+    Share.share({url});
   }
 
   _renderList() {
